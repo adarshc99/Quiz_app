@@ -1,0 +1,50 @@
+body
+{
+    background-color: #eee;
+}
+.container
+{
+    margin: 5% 10% 0 10%;
+    display: grid;
+    grid-template-rows: 1fr 2fr 3fr 1fr;
+}
+.header
+{
+    background-color: aqua;
+    display: grid;
+    grid-template-rows: 1fr 1fr;
+    grid-template-columns: 70% 20%;
+    /* grid-gap: 10%; */
+   
+}
+.question
+{
+    background-color: rgb(30, 255, 0);
+    padding: 0 5% 0 5%;
+   
+}
+.options
+{
+    background-color: rgb(68, 0, 255);
+    display: grid;
+    grid-template: repeat(2,1fr)/repeat(2,1fr);
+    align-items: center;
+    justify-items: center;
+
+
+}
+.direction
+{
+    background-color: rgb(255, 0, 149);
+    display: grid;
+    grid-template-columns: repeat(2,20%);
+    justify-items: center;
+    justify-content: space-between;
+    align-content: center
+    
+}
+.online_test
+{
+    grid-row : 1/span 2;
+    justify-self: center;
+}
