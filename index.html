@@ -8,25 +8,33 @@
     <link href="style.css" rel="stylesheet">
 </head>
 <body>
+    <div class = "Landing_Page">
+        <input type="button" onclick="start_test();Next_question()" value="Start" class = start_button>
+    </div>
     <div class="container">
         <div class="header">
             <div class="online_test">Online Test</div>
-            <div id="submit_test"><input type="button" value="submit"></div>
-            <div id="question_number">Question number</div>
+            <div id="submit_test"><input type="button" value="submit" id="submit_id" disabled onclick="show_result()"></div>
+            <div id="question_number"></div>
         </div>
         <div class="question">
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Soluta ex magni consectetur officiis rem ratione at quod, praesentium maiores expedita tempore perspiciatis laborum. Aliquam omnis, voluptate repellendus tempora iusto non.
         </div>
         <div class="options">
-            <div id="qustion1">option</div>
-            <div id="qustion2">option</div>
-            <div id="qustion3">option</div>
-            <div id="qustion4">option</div>
+            <input type="button"  id="1" onclick="ans_pass(this.id)">
+            <input type="button"  id="2" onclick="ans_pass(this.id)">
+            <input type="button"  id="3" onclick="ans_pass(this.id)">
+            <input type="button"  id="4" onclick="ans_pass(this.id)">
         </div>
         <div class="direction">
-            <div id="direction_left">left</div>
-            <div id="direction_right">right</div>
+            <input type="button" value="Previous" id="direction_left" onclick="Previous_question()" >
+            <input type="button" value="Next" id="direction_right" onclick="Next_question()" >
         </div>
     </div>
+    <div class = "submit_text_enabled">
+        <div class="result_content">Your Score is</div>
+        <div class="result"></div>
+    </div>
+
+    <script src="main.js"></script>
 </body>
 </html>
