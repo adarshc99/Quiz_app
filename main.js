@@ -69,10 +69,10 @@ function Next_question()
     if(index_question<questions_object.length)
     {
         document.getElementsByClassName("question").item(0).innerText = questions_object[index_question]["question"];
-        document.getElementById("1").value = questions_object[index_question]["options"]["1"];
-        document.getElementById("2").value = questions_object[index_question]["options"]["2"];
-        document.getElementById("3").value = questions_object[index_question]["options"]["3"];
-        document.getElementById("4").value = questions_object[index_question]["options"]["4"];
+        document.getElementById("1").innerHTML = questions_object[index_question]["options"]["1"];
+        document.getElementById("2").innerHTML = questions_object[index_question]["options"]["2"];
+        document.getElementById("3").innerHTML = questions_object[index_question]["options"]["3"];
+        document.getElementById("4").innerHTML = questions_object[index_question]["options"]["4"];
         document.getElementById("question_number").innerHTML = ("Question Number "+(index_question+1)+`/${questions_object.length}`);
         index_question+=1;
     }
@@ -88,10 +88,10 @@ function Previous_question()
     {
         index_question-=2;
         document.getElementsByClassName("question").item(0).innerText = questions_object[index_question]["question"];
-        document.getElementById("1").value = questions_object[index_question]["options"]["1"];
-        document.getElementById("2").value = questions_object[index_question]["options"]["2"];
-        document.getElementById("3").value = questions_object[index_question]["options"]["3"];
-        document.getElementById("4").value = questions_object[index_question]["options"]["4"];
+        document.getElementById("1").innerHTML = questions_object[index_question]["options"]["1"];
+        document.getElementById("2").innerHTML = questions_object[index_question]["options"]["2"];
+        document.getElementById("3").innerHTML = questions_object[index_question]["options"]["3"];
+        document.getElementById("4").innerHTML = questions_object[index_question]["options"]["4"];
         document.getElementById("question_number").innerHTML = ("Question Number "+(index_question+1)+`/${questions_object.length}`);
         index_question+=1;
     }
@@ -110,7 +110,6 @@ function ans_pass(get_id)
         document.getElementById("submit_id").style.background = "black";
         document.getElementById("submit_id").style.color = "cyan";
     }
-    console.log(ans_given);
    
 }
 function show_result()
